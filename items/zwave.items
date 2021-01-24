@@ -1,0 +1,2 @@
+Switch Caldaia "Stato caldaia [MAP(caldaia.map):%s]"  <temperature> (gCaldaiaStato, gCorriodio) ["HVAC","Switch"] {channel="remoteopenhab:server:192_168_178_10:SwitchBinary2_Caldaia_Tecnico_ZW22"}
+Number:Temperature FGMS001_ZW10_Temp "Temperatura Studio[%.1f °C]"  <temperature> (gStudio) ["HVAC","Measurement", "Temperature"] {channel="remoteopenhab:server:192_168_178_10:FGMS001_ZW10_Temp"}

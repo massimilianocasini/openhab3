@@ -1,0 +1,34 @@
+Group gAstroRadation "Astro" 
+Group gInterno "Interno"  ["Indoor"]
+Group gEsterno "Esterno"  ["Outdoor"]
+Group gPiani "Piani" (gInterno) ["Floor"]
+Group gPianoTerra "Piano terra" (gPiani) ["GroundFloor"]
+
+Group gLetto "Camera da letto" (gPianoTerra) ["Bedroom"]
+Group gCameretta "Cameretta" (gPianoTerra) ["Bedroom"]
+Group gStudio "Studio" (gPianoTerra) ["Office"]
+Group gBagno "Bagno" (gPianoTerra) ["Bathroom"]
+Group gBagnoDoccia "Bagno doccia" (gPianoTerra) ["Bathroom"]
+Group gCucina "Cucina" (gPianoTerra) ["Kitchen"]
+Group gSoggiorno "Soggiorno" (gPianoTerra) ["LivingRoom"]
+Group gCorridoio "Corridoio" (gPianoTerra) ["Corridor"]
+Group gIngresso "Ingresso" (gPianoTerra) ["Corridor"]
+
+Group gCondizionamento "Condizionamento" ["HVAC"]
+Group gCondizionamentoStudio "Condizionamento Studio" (gCondizionamento, gStudio) ["HVAC"]
+Group gCondizionamentoLetto "Condizionamento Letto" (gCondizionamento, gLetto) ["HVAC"]
+Group gCondizionamentoCameretta "Condizionamento Cameretta" (gCondizionamento, gCameretta) ["HVAC"]
+Group gCondizionamentoSoggiorno "Condizionamento Soggiorno" (gCondizionamento, gSoggiorno) ["HVAC"]
+//Group gSwitchCondizionamento "ON/OFF Condizionamento" (gCondizionamento) ["HVAC"]
+//Group gSetPointCondizionamento "SetPoint Condizionamento" (gCondizionamento) ["HVAC"]
+//Group gCondizionamento "SetPoint Condizionamento" (gCondizionamento) ["HVAC"]
+
+Group gAntifurto "Antifurto" 
+Group gFotovoltaico "Fotovoltaico" ["Inverter"]
+Group gInverter "Inverter" (gFotovoltaico) ["Inverter"]
+Group gMeter "Meter" (gFotovoltaico) ["Inverter"]
+
+Group gCaldaia "Caldaia" ["HVAC"]
+Group gCaldaiaStato "Stato caldaia" (gCaldaia) ["HVAC"]
+
+Group gRiscaldamento "Riscaldamento" (gPianoTerra) ["HVAC"]
