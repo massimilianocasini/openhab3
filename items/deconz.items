@@ -1,0 +1,3 @@
+Number:Temperature Aqara1T "Cameretta Aqara1T [%.1f °C]" <temperature> (gCameretta) ["Measurement","Temperature"] {channel="remoteopenhab:server:192_168_178_10:Aqara1T"}
+Number:Temperature Aqara2T "Soggiorno Aqara2T [%.1f °C]" <temperature> (gSoggiorno) ["Measurement","Temperature"] {channel="remoteopenhab:server:192_168_178_10:Aqara2T"}
+Number:Temperature Lumi1T "Corridoio Lumi1T [%.1f °C]" <temperature> (gCorridoio) ["Measurement","Temperature"] {channel="remoteopenhab:server:192_168_178_10:Lumi1T"}

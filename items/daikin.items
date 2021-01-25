@@ -1,0 +1,43 @@
+Group:Switch:OR(ON, OFF) gORDaikinPower "Power ALL"  <switch> 
+Group:String:EQUALITY gEqualityDaikinMode "Modo Lavoro ALL" <settings> 
+Group:Number:EQUALITY gEqualityDaikinSetPoint "SetPoint ALL [%.1f °C]" <temperature>
+Group:Number:AVG gAvgDaikinTemp "Temperatura media Daikin [%.1f °C]" <temperature>  
+
+
+Switch DaikinACUnit_Power_Studio "Power switch" <switch>  (gCondizionamentoStudio ) ["Control","Switch"] {synonyms="Condizionatore Studio", ga="Switch", channel="daikin:ac_unit:Studio:power" }
+Number:Temperature DaikinACUnit_SetPoint_Studio "SetPoint [%.1f °C]" <temperature> (gCondizionamentoStudio) ["Setpoint", "Temperature"] { channel="daikin:ac_unit:Studio:settemp" }
+String DaikinACUnit_Mode_Studio "Modalità" <settings> ( gCondizionamentoStudio) ["Status"] { channel="daikin:ac_unit:Studio:mode" }
+String DaikinACUnit_Fan_Studio "Velocità" <fan> ( gCondizionamentoStudio) ["Status"] { channel="daikin:ac_unit:Studio:fanspeed" }
+String DaikinACUnit_Fan_Movement_Studio "Swing" <fan> (gCondizionamentoStudio) ["Status", "Tilt"] { channel="daikin:ac_unit:Studio:fandir" }
+Number:Temperature DaikinACUnit_IndoorTemperature_Studio  "Temp. Interna [%.1f °C]" <temperature> (gCondizionamentoStudio) ["Measurement", "Temperature"]  {channel="daikin:ac_unit:Studio:indoortemp"}
+Number:Temperature DaikinACUnit_OutdoorTemperature_Studio "Temp. Esterna [%.1f °C]" <temperature> (gCondizionamentoStudio) ["Measurement", "Temperature"]  {channel="daikin:ac_unit:Studio:outdoortemp"}
+Number DaikinACUnit_CompressorFrequency_Studio "Frequenza compressore" (gCondizionamentoStudio) ["Measurement", "Frequency"] { channel="daikin:ac_unit:Studio:cmpfrequency"}
+
+Switch DaikinACUnit_Power_Soggiorno "Power switch" <switch> (gCondizionamentoSoggiorno) ["Control","Switch"] { ga="Switch" [roomHint="Soggiorno"], channel="daikin:ac_unit:Soggiorno:power" }
+Number:Temperature DaikinACUnit_SetPoint_Soggiorno "SetPoint [%.1f °C]" <temperature> (gCondizionamentoSoggiorno) ["Setpoint", "Temperature"]  { channel="daikin:ac_unit:Soggiorno:settemp" }
+String DaikinACUnit_Mode_Soggiorno "Modalità" <settings> (gCondizionamentoSoggiorno) ["Status"] { channel="daikin:ac_unit:Soggiorno:mode" }
+String DaikinACUnit_Fan_Soggiorno "Velocità" <fan> (gCondizionamentoSoggiorno) ["Status"] { channel="daikin:ac_unit:Soggiorno:fanspeed" }
+String DaikinACUnit_Fan_Movement_Soggiorno "Swing" (gCondizionamentoSoggiorno) ["Status", "Tilt"] { channel="daikin:ac_unit:Soggiorno:fandir" }
+Number:Temperature DaikinACUnit_IndoorTemperature_Soggiorno "Temp. Interna [%.1f °C]" <temperature> (gCondizionamentoSoggiorno) ["Measurement", "Temperature"] {channel="daikin:ac_unit:Soggiorno:indoortemp"}
+Number:Temperature DaikinACUnit_OutdoorTemperature_Soggiorno "Temp. Esterna [%.1f °C]" <temperature> (gCondizionamentoSoggiorno) ["Measurement", "Temperature"] { channel="daikin:ac_unit:Soggiorno:outdoortemp" }
+Number DaikinACUnit_CompressorFrequency_Soggiorno "Frequenza compressore" (gCondizionamentoSoggiorno) ["Measurement", "Frequency"] { channel="daikin:ac_unit:Soggiorno:cmpfrequency"}
+
+Switch DaikinACUnit_Power_Cameretta "Power switch" <switch> (gCondizionamentoCameretta) ["Control","Switch"] { ga="Switch" [roomHint="Cameretta"], channel="daikin:ac_unit:Cameretta:power" }
+Number:Temperature DaikinACUnit_SetPoint_Cameretta "SetPoint [%.1f °C]" <temperature> (gCondizionamentoCameretta) ["Setpoint", "Temperature"] { channel="daikin:ac_unit:Cameretta:settemp" }
+String DaikinACUnit_Mode_Cameretta "Modalità" <settings> (gCondizionamentoCameretta) ["Status"] { channel="daikin:ac_unit:Cameretta:mode" }
+String DaikinACUnit_Fan_Cameretta "Velocità" <fan> (gCondizionamentoCameretta) ["Status"] { channel="daikin:ac_unit:Cameretta:fanspeed" }
+String DaikinACUnit_Fan_Movement_Cameretta "Swing" (gCondizionamentoCameretta) ["Status", "Tilt"] { channel="daikin:ac_unit:Cameretta:fandir" }
+Number:Temperature DaikinACUnit_IndoorTemperature_Cameretta "Temp. Interna [%.1f °C]" <temperature> (gCondizionamentoCameretta) ["Measurement", "Temperature"]  {channel="daikin:ac_unit:Cameretta:indoortemp"}
+Number:Temperature DaikinACUnit_OutdoorTemperature_Cameretta "Temp. Esterna [%.1f °C]" <temperature> (gCondizionamentoCameretta) ["Measurement", "Temperature"] { channel="daikin:ac_unit:Cameretta:outdoortemp" }
+Number DaikinACUnit_CompressorFrequency_Cameretta "Frequenza compressore" (gCondizionamentoCameretta) ["Measurement", "Frequency"] { channel="daikin:ac_unit:Cameretta:cmpfrequency"}
+
+Switch DaikinACUnit_Power_Letto "Power switch" <switch> (gCondizionamentoLetto) ["Control","Switch"] { ga="Switch" [roomHint="Letto"], channel="daikin:ac_unit:Letto:power" }
+Number:Temperature DaikinACUnit_SetPoint_Letto "SetPoint [%.1f °C]"  <temperature> (gCondizionamentoLetto) ["Setpoint", "Temperature"] { channel="daikin:ac_unit:Letto:settemp" }
+String DaikinACUnit_Mode_Letto "Modalità" <settings> (gCondizionamentoLetto) ["Status"] { channel="daikin:ac_unit:Letto:mode" }
+String DaikinACUnit_Fan_Letto "Velocità" <fan> (gCondizionamentoLetto) ["Status"] { channel="daikin:ac_unit:Letto:fanspeed" }
+String DaikinACUnit_Fan_Movement_Letto "Swing" (gCondizionamentoLetto) ["Status", "Tilt"] { channel="daikin:ac_unit:Letto:fandir" }
+Number:Temperature DaikinACUnit_IndoorTemperature_Letto "Temp. Interna [%.1f °C]"  <temperature>  (gCondizionamentoLetto) ["Measurement", "Temperature"]  {channel="daikin:ac_unit:Letto:indoortemp"}
+Number:Temperature DaikinACUnit_OutdoorTemperature_Letto "Temp. Esterna [%.1f °C]"  <temperature>  (gCondizionamentoLetto) ["Measurement", "Temperature"] { channel="daikin:ac_unit:Letto:outdoortemp" }
+Number DaikinACUnit_CompressorFrequency_Letto "Frequenza compressore" (gCondizionamentoLetto) ["Measurement", "Frequency"] { channel="daikin:ac_unit:Letto:cmpfrequency"}
+Number:Energy DaikinACUnit_Energyheating1 "Energia per caldo gennaio" (gCondizionamentoLetto) ["Measurement", "Energy"] {channel="daikin:ac_unit:Letto:energyheatingcurrentyear-1"}
+Number:Energy DaikinACUnit_Energyheating12 "Energia per caldo dicembre" (gCondizionamentoLetto) ["Measurement", "Energy"] {channel="daikin:ac_unit:Letto:energyheatingcurrentyear-12"}
